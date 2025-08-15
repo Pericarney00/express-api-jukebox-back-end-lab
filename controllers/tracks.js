@@ -7,7 +7,7 @@ const router = express.Router()
 router.post("/", async (req, res) => {
   try {
     const createTrack = await Track.create(req.body)
-    res.status(201).json({createTrack})
+    res.status(201).json(createTrack)
   } catch (error) {
     res.status(500).json({error:error.message})
   }
