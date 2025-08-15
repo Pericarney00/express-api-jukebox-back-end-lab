@@ -17,7 +17,7 @@ router.post("/", async (req, res) => {
 router.get("/", async (req, res) => {
   try {
     const foundTracks = await Track.find()
-    res.status(200).json({foundTracks})
+    res.status(200).json(foundTracks)
   } catch (error) {
     res.status(500).json({error:error.message})
   }
